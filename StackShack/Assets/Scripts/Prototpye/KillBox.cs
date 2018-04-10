@@ -32,5 +32,10 @@ public class KillBox : MonoBehaviour {
 
     }
 
+    public void setDeaths(int i)
+    {
+        deaths = i;
+    }
+
     
 }

@@ -11,6 +11,7 @@ public class Retry : MonoBehaviour {
     public void changeSceneTo(string s)
     {
         Debug.Log("HAAH");
+        GetComponentInParent<Manager>().restDeaths();
         SceneManager.LoadScene(s);
     }
 

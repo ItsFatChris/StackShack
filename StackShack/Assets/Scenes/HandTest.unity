@@ -155,6 +155,7 @@ MonoBehaviour:
   leftWall: {fileID: 1797268308712714, guid: 3c13fc3ef51a4a344bfe406365de74dd, type: 2}
   killBox: {fileID: 1942221405075734, guid: 8702e0c12408df846a42964ce8f60fbd, type: 2}
   menu: {fileID: 1240291354414452, guid: 78088a82503ecc2458f535aba908a454, type: 2}
+  lives: 1
 --- !u!4 &343306533
 Transform:
   m_ObjectHideFlags: 0

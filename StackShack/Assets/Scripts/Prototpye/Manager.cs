@@ -17,7 +17,7 @@ public class Manager : MonoBehaviour {
     public GameObject leftWall;
     public GameObject killBox;
     public GameObject menu;
-    private int lives = 3;
+    public int lives = 3;
     private bool hasRun = false;
 
 
@@ -30,6 +30,8 @@ public class Manager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
+
+       
         //call spawn() every 3 seconds
         InvokeRepeating("spawn", 3.0f, 3f);
 
@@ -38,6 +40,8 @@ public class Manager : MonoBehaviour {
         Instantiate(leftWall);
         Instantiate(killBox);
 
+        killBox.GetComponent<KillBox>().setDeaths(0);
+        Hand.GetComponent<HandMovement>().setCanMove(true);
 
 
     }
@@ -56,12 +60,12 @@ public class Manager : MonoBehaviour {
         switch (count)
         {
             case 0:
-                Instantiate(TBun, Spawn[rand].position, Spawn[rand].rotation);
+                Instantiate(BBun, Spawn[rand].position, Spawn[rand].rotation);
                 count++;
                 break;
 
             case 1:
-                Instantiate(Lettuce, Spawn[rand].position, Spawn[rand].rotation);
+                Instantiate(Burger, Spawn[rand].position, Spawn[rand].rotation);
                 count++;
                 break;
 
@@ -71,12 +75,12 @@ public class Manager : MonoBehaviour {
                 break;
 
             case 3:
-                Instantiate(Burger, Spawn[rand].position, Spawn[rand].rotation);
+                Instantiate(Lettuce, Spawn[rand].position, Spawn[rand].rotation);
                 count++;
                 break;
 
             case 4:
-                Instantiate(BBun, Spawn[rand].position, Spawn[rand].rotation);
+                Instantiate(TBun, Spawn[rand].position, Spawn[rand].rotation);
                 count++;
                 break;
 
@@ -92,12 +96,14 @@ public class Manager : MonoBehaviour {
 
     private void CheckLives()
     {
-
+        
         if (lives < killBox.GetComponent<KillBox>().getDeaths() && hasRun == false)
         {
 
             gameOver();
         }
+
+        
         
 
     }
@@ -117,5 +123,13 @@ public class Manager : MonoBehaviour {
             //retry
             //quit 
 
+    }
+
+    public void restDeaths()
+    {
+
+        killBox.GetComponent<KillBox>().setDeaths(0);
+        Hand.GetComponent<HandMovement>().setCanMove(true);
+        Destroy(menu);
     }
 }
