@@ -70,7 +70,8 @@ public class Manager : MonoBehaviour {
 
     void spawn()
     {
-        rand = Random.Range(0, 3);
+        rand = Random.Range(0, 4);
+        Debug.Log(rand);
 
         switch (count)
         {
@@ -136,7 +137,7 @@ public class Manager : MonoBehaviour {
 
         }
 
-             //Instantiate(item, Spawn[rand].position, Spawn[rand].rotation);
+             
             
         
         
@@ -185,20 +186,17 @@ public class Manager : MonoBehaviour {
         //stop spawning of burger parts
         CancelInvoke();
 
-
+        //make game over menu
         Instantiate(menu);
 
-        //pop menu
-            //retry
-            //quit 
+        if (Hand.GetComponent<Rigidbody2D>().velocity.magnitude > 0)
+        {
+            Hand.GetComponent<Rigidbody2D>().velocity = Hand.GetComponent<Rigidbody2D>().velocity.normalized * 0;
+        }
+
+
 
     }
 
-    public void restDeaths()
-    {
-
-        killBox.GetComponent<KillBox>().setDeaths(0);
-        Hand.GetComponent<HandMovement>().setCanMove(true);
-        Destroy(menu);
-    }
+    
 }
