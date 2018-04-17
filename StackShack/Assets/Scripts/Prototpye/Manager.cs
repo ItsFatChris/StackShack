@@ -24,8 +24,11 @@ public class Manager : MonoBehaviour {
     public GameObject showBbun;
     public GameObject winBox;
     public GameObject arrow;
+    public GameObject twoHits;
+    public GameObject oneHits;
     public int lives = 3;
     private bool hasRun = false;
+    private bool livesRun = false;
 
 
    
@@ -46,6 +49,7 @@ public class Manager : MonoBehaviour {
         infoBar = Instantiate(infoBar);
         leftWall = Instantiate(leftWall);
         killBox = Instantiate(killBox);
+        twoHits = Instantiate(twoHits);
 
         showTbun = Instantiate(showTbun);
         
@@ -148,8 +152,22 @@ public class Manager : MonoBehaviour {
             gameOver();
         }
 
-        
-        
+        if(killBox.GetComponent<KillBox>().getDeaths() == 1 && livesRun ==false)
+        {
+            livesRun = true;
+            oneHits = Instantiate(oneHits);
+            Destroy(twoHits);
+        }
+
+        if (killBox.GetComponent<KillBox>().getDeaths() == 2)
+        {
+            
+            Destroy(oneHits);
+        }
+
+
+
+
 
     }
 
