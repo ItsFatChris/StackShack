@@ -5,7 +5,7 @@ using UnityEngine;
 public class KillBox : MonoBehaviour {
 
 
-    private static int deaths = 0;
+    private int deaths = 0;
 
 
 	// Use this for initialization

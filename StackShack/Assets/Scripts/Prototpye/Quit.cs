@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Quit : MonoBehaviour {
 
@@ -9,8 +10,8 @@ public class Quit : MonoBehaviour {
 
     public void callMe()
     {
-        Debug.Log("HEHE");
-        Application.Quit();
+        SceneManager.LoadScene("Title");
+        //Application.Quit();
     }
 
 }

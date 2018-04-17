@@ -9,7 +9,7 @@ public class HandMovement : MonoBehaviour {
     private float movementInputValue;
     private float speed = 15f;
     private float moveSpeed = 5f;
-    private static bool canMove = true;
+    private bool canMove = true;
 
 
     private void Awake()

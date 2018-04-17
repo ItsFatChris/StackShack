@@ -13,7 +13,7 @@ public class Manager : MonoBehaviour {
     public GameObject Burger;
     public GameObject BBun;
     public GameObject Hand;
-    public GameObject infoBAr;
+    public GameObject infoBar;
     public GameObject leftWall;
     public GameObject killBox;
     public GameObject menu;
@@ -22,6 +22,8 @@ public class Manager : MonoBehaviour {
     public GameObject showTom;
     public GameObject showBurg;
     public GameObject showBbun;
+    public GameObject winBox;
+    public GameObject arrow;
     public int lives = 3;
     private bool hasRun = false;
 
@@ -40,21 +42,14 @@ public class Manager : MonoBehaviour {
         //call spawn() every 3 seconds
         InvokeRepeating("spawn", 3.0f, 3f);
 
-        Instantiate(Hand);
-        Instantiate(infoBAr);
-        Instantiate(leftWall);
-        Instantiate(killBox);
+        Hand = Instantiate(Hand);
+        infoBar = Instantiate(infoBar);
+        leftWall = Instantiate(leftWall);
+        killBox = Instantiate(killBox);
 
-        Instantiate(showTbun);
-        Instantiate(showLett);
-        Instantiate(showTom);
-        Instantiate(showBurg);
-        Instantiate(showBbun);
-        showTbun.GetComponent<SpriteRenderer>().enabled = false;
-        showLett.GetComponent<SpriteRenderer>().enabled = false;
-        showTom.GetComponent<SpriteRenderer>().enabled = false;
-        showBurg.GetComponent<SpriteRenderer>().enabled = false;
-        //showBbun.GetComponent<SpriteRenderer>().enabled = false;
+        showTbun = Instantiate(showTbun);
+        
+        
 
         killBox.GetComponent<KillBox>().setDeaths(0);
         Hand.GetComponent<HandMovement>().setCanMove(true);
@@ -76,38 +71,64 @@ public class Manager : MonoBehaviour {
         switch (count)
         {
             case 0:
+                arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
                 Instantiate(BBun, Spawn[rand].position, Spawn[rand].rotation);
-                showBbun.GetComponent<SpriteRenderer>().enabled = false;
-                showBurg.GetComponent<SpriteRenderer>().enabled = true;
+                
+                Destroy(showTbun);
+                showLett = Instantiate(showLett);
+                
                 count++;
                 break;
 
             case 1:
+
+                Destroy(arrow);
+                arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
                 Instantiate(Burger, Spawn[rand].position, Spawn[rand].rotation);
-                showBurg.GetComponent<SpriteRenderer>().enabled = false;
-                showTom.GetComponent<SpriteRenderer>().enabled = true;
+                
+                Destroy(showLett);
+                showTom = Instantiate(showTom);
+                
                 count++;
                 break;
 
             case 2:
+                Destroy(arrow);
+                arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
                 Instantiate(Tomato, Spawn[rand].position, Spawn[rand].rotation);
-                showTom.GetComponent<SpriteRenderer>().enabled = false;
-                showLett.GetComponent<SpriteRenderer>().enabled = true;
+                
+                Destroy(showTom);
+                showBurg = Instantiate(showBurg);
+                
                 count++;
                 break;
 
             case 3:
+                Destroy(arrow);
+                arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
                 Instantiate(Lettuce, Spawn[rand].position, Spawn[rand].rotation);
-                showLett.GetComponent<SpriteRenderer>().enabled = false;
-                showTbun.GetComponent<SpriteRenderer>().enabled = true;
+                
+                Destroy(showBurg);
+                showBbun = Instantiate(showBbun);
                 count++;
                 break;
 
             case 4:
+                Destroy(arrow);
+                arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
+
                 Instantiate(TBun, Spawn[rand].position, Spawn[rand].rotation);
                 count++;
                 break;
 
+            case 6:
+                gameWin();
+                count++;
+                break;
+
+            default:
+                count++;
+                break;
 
         }
 
@@ -129,6 +150,12 @@ public class Manager : MonoBehaviour {
 
         
         
+
+    }
+
+    private void gameWin()
+    {
+        Instantiate(winBox);
 
     }
 
