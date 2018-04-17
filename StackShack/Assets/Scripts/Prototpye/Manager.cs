@@ -17,6 +17,11 @@ public class Manager : MonoBehaviour {
     public GameObject leftWall;
     public GameObject killBox;
     public GameObject menu;
+    public GameObject showTbun;
+    public GameObject showLett;
+    public GameObject showTom;
+    public GameObject showBurg;
+    public GameObject showBbun;
     public int lives = 3;
     private bool hasRun = false;
 
@@ -40,6 +45,17 @@ public class Manager : MonoBehaviour {
         Instantiate(leftWall);
         Instantiate(killBox);
 
+        Instantiate(showTbun);
+        Instantiate(showLett);
+        Instantiate(showTom);
+        Instantiate(showBurg);
+        Instantiate(showBbun);
+        showTbun.GetComponent<SpriteRenderer>().enabled = false;
+        showLett.GetComponent<SpriteRenderer>().enabled = false;
+        showTom.GetComponent<SpriteRenderer>().enabled = false;
+        showBurg.GetComponent<SpriteRenderer>().enabled = false;
+        //showBbun.GetComponent<SpriteRenderer>().enabled = false;
+
         killBox.GetComponent<KillBox>().setDeaths(0);
         Hand.GetComponent<HandMovement>().setCanMove(true);
 
@@ -61,21 +77,29 @@ public class Manager : MonoBehaviour {
         {
             case 0:
                 Instantiate(BBun, Spawn[rand].position, Spawn[rand].rotation);
+                showBbun.GetComponent<SpriteRenderer>().enabled = false;
+                showBurg.GetComponent<SpriteRenderer>().enabled = true;
                 count++;
                 break;
 
             case 1:
                 Instantiate(Burger, Spawn[rand].position, Spawn[rand].rotation);
+                showBurg.GetComponent<SpriteRenderer>().enabled = false;
+                showTom.GetComponent<SpriteRenderer>().enabled = true;
                 count++;
                 break;
 
             case 2:
                 Instantiate(Tomato, Spawn[rand].position, Spawn[rand].rotation);
+                showTom.GetComponent<SpriteRenderer>().enabled = false;
+                showLett.GetComponent<SpriteRenderer>().enabled = true;
                 count++;
                 break;
 
             case 3:
                 Instantiate(Lettuce, Spawn[rand].position, Spawn[rand].rotation);
+                showLett.GetComponent<SpriteRenderer>().enabled = false;
+                showTbun.GetComponent<SpriteRenderer>().enabled = true;
                 count++;
                 break;
 
