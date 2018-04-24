@@ -20,9 +20,9 @@ GameObject:
   m_Component:
   - component: {fileID: 4629283831758694}
   - component: {fileID: 212705943797649794}
-  - component: {fileID: 61626443299458302}
   - component: {fileID: 50936689244417728}
   - component: {fileID: 114745025231729770}
+  - component: {fileID: 68752133991474122}
   m_Layer: 0
   m_Name: Hand
   m_TagString: Untagged
@@ -63,31 +63,24 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 6
---- !u!61 &61626443299458302
-BoxCollider2D:
+--- !u!68 &68752133991474122
+EdgeCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1809895675558674}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 9609103d341920041b7998d6790e5521, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 0.56}
-    newSize: {x: 10.24, y: 20.48}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 1, y: 0.56}
+  m_Offset: {x: 0, y: 0.28}
   m_EdgeRadius: 0
+  m_Points:
+  - {x: -0.49999997, y: 0}
+  - {x: -0.045946695, y: -0.20644775}
+  - {x: 0.49999997, y: 0}
 --- !u!114 &114745025231729770
 MonoBehaviour:
   m_ObjectHideFlags: 1
