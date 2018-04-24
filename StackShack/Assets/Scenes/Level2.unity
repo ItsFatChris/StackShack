@@ -113,6 +113,77 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &209106878
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 209106880}
+  - component: {fileID: 209106879}
+  m_Layer: 0
+  m_Name: Manager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &209106879
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 209106878}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52691ae21b4a7ad40a3a575da2a71eaa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Spawn:
+  - {fileID: 4358997031127744, guid: a81558d73d5f76945a5dc44d653b836f, type: 2}
+  - {fileID: 4359568274197652, guid: 6ab154798ca62fc42957c12fc47bc842, type: 2}
+  - {fileID: 4583453915418996, guid: af9860032e45a394c897094f074576e8, type: 2}
+  - {fileID: 4462654318247426, guid: 89f692263c6fec54790641cb8e736163, type: 2}
+  StartSpawn: {fileID: 4702369983148694, guid: dc7988314b6645a4e8b7c54ac68aa1c5, type: 2}
+  TBun: {fileID: 1970990000038416, guid: d878ce7cf8f0a7e4597f910e049da608, type: 2}
+  Lettuce: {fileID: 1131607956513274, guid: 7f5167f852bfddd4bbc22b0d6e0485c9, type: 2}
+  Tomato: {fileID: 1115316771098922, guid: c379ef5eab4c87143a677ec197d53512, type: 2}
+  Burger: {fileID: 1099844822334232, guid: 53d060d73d049da42be5b6da51ca7e37, type: 2}
+  BBun: {fileID: 1332808065594834, guid: 42ba5c7ff5ac4714dac27a1ff09ff72a, type: 2}
+  Hand: {fileID: 1809895675558674, guid: d83f0c9a8269eef4893276862e186083, type: 2}
+  Cheese: {fileID: 1884119682559780, guid: 41983e474e40c814b84f83da65adfd79, type: 2}
+  Pickles: {fileID: 1406687062059162, guid: b2e29c920699c3a4e9d71e2b77d104e1, type: 2}
+  infoBar: {fileID: 1188743040678242, guid: de8689ee88c5a484084ed7272162fbcd, type: 2}
+  leftWall: {fileID: 1797268308712714, guid: 3c13fc3ef51a4a344bfe406365de74dd, type: 2}
+  killBox: {fileID: 1942221405075734, guid: 8702e0c12408df846a42964ce8f60fbd, type: 2}
+  menu: {fileID: 1240291354414452, guid: 78088a82503ecc2458f535aba908a454, type: 2}
+  showTbun: {fileID: 1749026009198220, guid: e5f04e2d2f0d3fb46a229b6591fe280b, type: 2}
+  showLett: {fileID: 1424758539875216, guid: 8f82b06edfbd4ea4d9ca55e4775abf05, type: 2}
+  showTom: {fileID: 1612290773232218, guid: 7b2ba98b791185c43ad6be04bcd17639, type: 2}
+  showBurg: {fileID: 1574415941690066, guid: a17c24ff0af2b0146af101f19c4b7f0c, type: 2}
+  showBbun: {fileID: 1216125141348732, guid: 2c7075aa143235f4ba9370ecdee53053, type: 2}
+  showCheese: {fileID: 1459874477567090, guid: 7ba9c9bb34fdf0b43951cf8921795c84, type: 2}
+  showPickles: {fileID: 1745816566122324, guid: 71abd4cf3a5561a44a48195779dba7a5,
+    type: 2}
+  winBox: {fileID: 1127604634466784, guid: 06a8d7b920c10b04fb97f09a4d2fc0bc, type: 2}
+  arrow: {fileID: 1387368593590620, guid: 0fc641d20bc360941ae19bc62050e0b9, type: 2}
+  twoHits: {fileID: 1251667910798666, guid: 3c79db2ce93039e43af06932ec0b8554, type: 2}
+  oneHits: {fileID: 1650049514791860, guid: 883d2cd6d545a0b42b97e3805829b5d5, type: 2}
+  lives: 3
+--- !u!4 &209106880
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 209106878}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -4.0383034, y: -3.5509505, z: 0.0751816}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1033049068
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,70 +264,4 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1280524216
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 1280524218}
-  - component: {fileID: 1280524217}
-  m_Layer: 0
-  m_Name: Manager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1280524217
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1280524216}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5500704ffffe9b41a7d4299804f6807, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Spawn:
-  - {fileID: 4358997031127744, guid: a81558d73d5f76945a5dc44d653b836f, type: 2}
-  - {fileID: 4359568274197652, guid: 6ab154798ca62fc42957c12fc47bc842, type: 2}
-  - {fileID: 4583453915418996, guid: af9860032e45a394c897094f074576e8, type: 2}
-  - {fileID: 4462654318247426, guid: 89f692263c6fec54790641cb8e736163, type: 2}
-  StartSpawn: {fileID: 4702369983148694, guid: dc7988314b6645a4e8b7c54ac68aa1c5, type: 2}
-  TBun: {fileID: 1970990000038416, guid: d878ce7cf8f0a7e4597f910e049da608, type: 2}
-  Lettuce: {fileID: 1131607956513274, guid: 7f5167f852bfddd4bbc22b0d6e0485c9, type: 2}
-  Tomato: {fileID: 1115316771098922, guid: c379ef5eab4c87143a677ec197d53512, type: 2}
-  Burger: {fileID: 1099844822334232, guid: 53d060d73d049da42be5b6da51ca7e37, type: 2}
-  BBun: {fileID: 1332808065594834, guid: 42ba5c7ff5ac4714dac27a1ff09ff72a, type: 2}
-  Hand: {fileID: 1809895675558674, guid: d83f0c9a8269eef4893276862e186083, type: 2}
-  infoBar: {fileID: 1188743040678242, guid: de8689ee88c5a484084ed7272162fbcd, type: 2}
-  leftWall: {fileID: 1797268308712714, guid: 3c13fc3ef51a4a344bfe406365de74dd, type: 2}
-  killBox: {fileID: 1942221405075734, guid: 8702e0c12408df846a42964ce8f60fbd, type: 2}
-  menu: {fileID: 1240291354414452, guid: 78088a82503ecc2458f535aba908a454, type: 2}
-  showTbun: {fileID: 1749026009198220, guid: e5f04e2d2f0d3fb46a229b6591fe280b, type: 2}
-  showLett: {fileID: 1424758539875216, guid: 8f82b06edfbd4ea4d9ca55e4775abf05, type: 2}
-  showTom: {fileID: 1612290773232218, guid: 7b2ba98b791185c43ad6be04bcd17639, type: 2}
-  showBurg: {fileID: 1574415941690066, guid: a17c24ff0af2b0146af101f19c4b7f0c, type: 2}
-  showBbun: {fileID: 1216125141348732, guid: 2c7075aa143235f4ba9370ecdee53053, type: 2}
-  winBox: {fileID: 1127604634466784, guid: 06a8d7b920c10b04fb97f09a4d2fc0bc, type: 2}
-  arrow: {fileID: 1387368593590620, guid: 0fc641d20bc360941ae19bc62050e0b9, type: 2}
-  twoHits: {fileID: 1251667910798666, guid: 3c79db2ce93039e43af06932ec0b8554, type: 2}
-  oneHits: {fileID: 1650049514791860, guid: 883d2cd6d545a0b42b97e3805829b5d5, type: 2}
-  lives: 1
---- !u!4 &1280524218
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1280524216}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.98631036, y: 5.4133697, z: -0.046875}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
