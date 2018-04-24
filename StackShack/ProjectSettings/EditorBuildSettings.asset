@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/HandTest.unity
     guid: 4b660cb29c8a8564b82c5427d10ee5eb
+  - enabled: 1
+    path: Assets/Scenes/Level2.unity
+    guid: d21dd7e5149716948827280891b57746

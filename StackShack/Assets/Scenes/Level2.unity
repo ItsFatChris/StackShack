@@ -166,7 +166,7 @@ MonoBehaviour:
   showCheese: {fileID: 1459874477567090, guid: 7ba9c9bb34fdf0b43951cf8921795c84, type: 2}
   showPickles: {fileID: 1745816566122324, guid: 71abd4cf3a5561a44a48195779dba7a5,
     type: 2}
-  winBox: {fileID: 1127604634466784, guid: 06a8d7b920c10b04fb97f09a4d2fc0bc, type: 2}
+  winBox: {fileID: 1794260533801892, guid: 139a8151ca819464da2cf319c1b9f394, type: 2}
   arrow: {fileID: 1387368593590620, guid: 0fc641d20bc360941ae19bc62050e0b9, type: 2}
   twoHits: {fileID: 1251667910798666, guid: 3c79db2ce93039e43af06932ec0b8554, type: 2}
   oneHits: {fileID: 1650049514791860, guid: 883d2cd6d545a0b42b97e3805829b5d5, type: 2}
