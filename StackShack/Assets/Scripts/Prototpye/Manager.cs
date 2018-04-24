@@ -52,7 +52,7 @@ public class Manager : MonoBehaviour {
         leftWall = Instantiate(leftWall);
         killBox = Instantiate(killBox);
         twoHits = Instantiate(twoHits);
-        showTbun = Instantiate(showTbun);
+        showBbun = Instantiate(showBbun);
         
         
         //set the deaths on the killbox to 0 just incase
@@ -88,22 +88,24 @@ public class Manager : MonoBehaviour {
                 BBun = Instantiate(BBun, StartSpawn.position, StartSpawn.rotation);
                 
                 //get rid of the showing of the piece and replace it with the next piece
-                Destroy(showTbun);
-                showLett = Instantiate(showLett);
+                Destroy(showBbun);
+                showBurg = Instantiate(showBurg);
                 
                 //increase the count
                 count++;
                 break;
 
             case 1:
-                
-                BBun.GetComponent<Rigidbody2D>().Sleep();
+                if (BBun)
+                {
+                    BBun.GetComponent<Rigidbody2D>().Sleep();
+                }
                 
                 Destroy(arrow);
                 arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
                 Burger = Instantiate(Burger, Spawn[rand].position, Spawn[rand].rotation);
                 
-                Destroy(showLett);
+                Destroy(showBurg);
                 showTom = Instantiate(showTom);
                 
                 count++;
@@ -113,34 +115,37 @@ public class Manager : MonoBehaviour {
 
                 //Burger.GetComponent<Rigidbody2D>().gravityScale = 50;
                 //BBun.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
-                Burger.GetComponent<Rigidbody2D>().Sleep();
+                if (Burger)
+                { Burger.GetComponent<Rigidbody2D>().Sleep(); }
                 Destroy(arrow);
                 arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
                 Tomato = Instantiate(Tomato, Spawn[rand].position, Spawn[rand].rotation);
                 
                 Destroy(showTom);
-                showBurg = Instantiate(showBurg);
+                showLett = Instantiate(showLett);
                 
                 count++;
                 break;
 
             case 3:
 
-               // Burger.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
-                Tomato.GetComponent<Rigidbody2D>().Sleep();
+                // Burger.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                if (Tomato)
+                { Tomato.GetComponent<Rigidbody2D>().Sleep(); }
                 Destroy(arrow);
                 arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
                 Lettuce = Instantiate(Lettuce, Spawn[rand].position, Spawn[rand].rotation);
                 
-                Destroy(showBurg);
-                showBbun = Instantiate(showBbun);
+                Destroy(showLett);
+                showTbun = Instantiate(showTbun);
                 count++;
                 break;
 
             case 4:
 
                 //Tomato.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
-                Lettuce.GetComponent<Rigidbody2D>().Sleep();
+                if (Lettuce)
+                { Lettuce.GetComponent<Rigidbody2D>().Sleep(); }
                 Destroy(arrow);
                 arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
 
