@@ -84,7 +84,7 @@ public class Manager : MonoBehaviour {
                 arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
 
                 //create the burger piece at the spwanpoint
-                Instantiate(BBun, Spawn[rand].position, Spawn[rand].rotation);
+                BBun = Instantiate(BBun, Spawn[rand].position, Spawn[rand].rotation);
                 
                 //get rid of the showing of the piece and replace it with the next piece
                 Destroy(showTbun);
@@ -96,9 +96,10 @@ public class Manager : MonoBehaviour {
 
             case 1:
 
+                BBun.GetComponent<Rigidbody2D>().Sleep();
                 Destroy(arrow);
                 arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
-                Instantiate(Burger, Spawn[rand].position, Spawn[rand].rotation);
+                Burger = Instantiate(Burger, Spawn[rand].position, Spawn[rand].rotation);
                 
                 Destroy(showLett);
                 showTom = Instantiate(showTom);
@@ -107,9 +108,11 @@ public class Manager : MonoBehaviour {
                 break;
 
             case 2:
+
+                Burger.GetComponent<Rigidbody2D>().Sleep();
                 Destroy(arrow);
                 arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
-                Instantiate(Tomato, Spawn[rand].position, Spawn[rand].rotation);
+                Tomato = Instantiate(Tomato, Spawn[rand].position, Spawn[rand].rotation);
                 
                 Destroy(showTom);
                 showBurg = Instantiate(showBurg);
@@ -118,9 +121,11 @@ public class Manager : MonoBehaviour {
                 break;
 
             case 3:
+
+                Tomato.GetComponent<Rigidbody2D>().Sleep();
                 Destroy(arrow);
                 arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
-                Instantiate(Lettuce, Spawn[rand].position, Spawn[rand].rotation);
+                Lettuce = Instantiate(Lettuce, Spawn[rand].position, Spawn[rand].rotation);
                 
                 Destroy(showBurg);
                 showBbun = Instantiate(showBbun);
@@ -128,10 +133,11 @@ public class Manager : MonoBehaviour {
                 break;
 
             case 4:
+                Lettuce.GetComponent<Rigidbody2D>().Sleep();
                 Destroy(arrow);
                 arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
 
-                Instantiate(TBun, Spawn[rand].position, Spawn[rand].rotation);
+                TBun = Instantiate(TBun, Spawn[rand].position, Spawn[rand].rotation);
                 count++;
                 break;
 
