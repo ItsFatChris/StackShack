@@ -5,6 +5,7 @@ using UnityEngine;
 public class Manager : MonoBehaviour {
 
     public Transform[] Spawn = new Transform[4];
+    public Transform StartSpawn;
     private int rand;
     private int count = 0;
     public GameObject TBun;
@@ -81,10 +82,10 @@ public class Manager : MonoBehaviour {
             case 0:
 
                 //create an arrow to show where the next piece will spawn
-                arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
+                arrow = Instantiate(arrow, StartSpawn.position, arrow.transform.rotation);
 
                 //create the burger piece at the spwanpoint
-                BBun = Instantiate(BBun, Spawn[rand].position, Spawn[rand].rotation);
+                BBun = Instantiate(BBun, StartSpawn.position, StartSpawn.rotation);
                 
                 //get rid of the showing of the piece and replace it with the next piece
                 Destroy(showTbun);
@@ -95,8 +96,9 @@ public class Manager : MonoBehaviour {
                 break;
 
             case 1:
-
+                
                 BBun.GetComponent<Rigidbody2D>().Sleep();
+                
                 Destroy(arrow);
                 arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
                 Burger = Instantiate(Burger, Spawn[rand].position, Spawn[rand].rotation);
@@ -109,6 +111,8 @@ public class Manager : MonoBehaviour {
 
             case 2:
 
+                //Burger.GetComponent<Rigidbody2D>().gravityScale = 50;
+                //BBun.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                 Burger.GetComponent<Rigidbody2D>().Sleep();
                 Destroy(arrow);
                 arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
@@ -122,6 +126,7 @@ public class Manager : MonoBehaviour {
 
             case 3:
 
+               // Burger.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                 Tomato.GetComponent<Rigidbody2D>().Sleep();
                 Destroy(arrow);
                 arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
@@ -133,6 +138,8 @@ public class Manager : MonoBehaviour {
                 break;
 
             case 4:
+
+                //Tomato.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                 Lettuce.GetComponent<Rigidbody2D>().Sleep();
                 Destroy(arrow);
                 arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
