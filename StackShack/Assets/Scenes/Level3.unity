@@ -255,7 +255,7 @@ MonoBehaviour:
   arrow: {fileID: 1387368593590620, guid: 0fc641d20bc360941ae19bc62050e0b9, type: 2}
   twoHits: {fileID: 1251667910798666, guid: 3c79db2ce93039e43af06932ec0b8554, type: 2}
   oneHits: {fileID: 1650049514791860, guid: 883d2cd6d545a0b42b97e3805829b5d5, type: 2}
-  lives: 8
+  lives: 3
 --- !u!4 &1276607562
 Transform:
   m_ObjectHideFlags: 0
