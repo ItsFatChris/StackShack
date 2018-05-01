@@ -126,6 +126,7 @@ public class ManagerLevel2 : MonoBehaviour {
                 if (BBun)
                 {
                     BBun.GetComponent<Rigidbody2D>().Sleep();
+                    BBun.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                 }
 
                 Destroy(arrow);
@@ -148,7 +149,10 @@ public class ManagerLevel2 : MonoBehaviour {
 
 
                 if (Burger)
-                { Burger.GetComponent<Rigidbody2D>().Sleep(); }
+                {
+                    Burger.GetComponent<Rigidbody2D>().Sleep();
+                    Burger.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                }
 
                 Destroy(arrow);
                 arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
@@ -177,7 +181,10 @@ public class ManagerLevel2 : MonoBehaviour {
 
                 //change the burger part of this to cheese
                 if (Cheese)
-                { Cheese.GetComponent<Rigidbody2D>().Sleep(); }
+                {
+                    Cheese.GetComponent<Rigidbody2D>().Sleep();
+                    Cheese.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                }
                 Destroy(arrow);
                 arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
                 Tomato = Instantiate(Tomato, Spawn[rand].position, Spawn[rand].rotation);
