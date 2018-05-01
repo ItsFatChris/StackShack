@@ -133,6 +133,7 @@ public class ManagerLevel3 : MonoBehaviour {
                 if (BBun)
                 {
                     BBun.GetComponent<Rigidbody2D>().Sleep();
+                    BBun.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                 }
 
                 Destroy(arrow);
@@ -155,7 +156,10 @@ public class ManagerLevel3 : MonoBehaviour {
 
 
                 if (Burger)
-                { Burger.GetComponent<Rigidbody2D>().Sleep(); }
+                {
+                    Burger.GetComponent<Rigidbody2D>().Sleep();
+                    Burger.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                }
 
                 Destroy(arrow);
                 arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
@@ -163,7 +167,7 @@ public class ManagerLevel3 : MonoBehaviour {
 
                 Destroy(showCheese);
                 showTom = Instantiate(showTom);
-
+                
                 count++;
 
 
@@ -184,7 +188,10 @@ public class ManagerLevel3 : MonoBehaviour {
 
                 //change the burger part of this to cheese
                 if (Cheese)
-                { Cheese.GetComponent<Rigidbody2D>().Sleep(); }
+                {
+                    Cheese.GetComponent<Rigidbody2D>().Sleep();
+                    Cheese.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                }
                 Destroy(arrow);
                 arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
                 Tomato = Instantiate(Tomato, Spawn[rand].position, Spawn[rand].rotation);
@@ -203,7 +210,10 @@ public class ManagerLevel3 : MonoBehaviour {
                 * Spawn Pickles
                 **/
                 if (Tomato)
-                { Tomato.GetComponent<Rigidbody2D>().Sleep(); }
+                {
+                    Tomato.GetComponent<Rigidbody2D>().Sleep();
+                    Tomato.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                }
                 Destroy(arrow);
                 arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
                 Pickles = Instantiate(Pickles, Spawn[rand].position, Spawn[rand].rotation);
@@ -218,9 +228,17 @@ public class ManagerLevel3 : MonoBehaviour {
 
             case 5:
 
+
+                /**
+                 * Spawn Lettuce
+                 **/
+
                 // Burger.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
                 if (Pickles)
-                { Pickles.GetComponent<Rigidbody2D>().Sleep(); }
+                {
+                    Pickles.GetComponent<Rigidbody2D>().Sleep();
+                    Pickles.GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.FreezeRotation;
+                }
                 Destroy(arrow);
                 arrow = Instantiate(arrow, Spawn[rand].position, arrow.transform.rotation);
                 Lettuce = Instantiate(Lettuce, Spawn[rand].position, Spawn[rand].rotation);
