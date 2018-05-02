@@ -1,7 +1,24 @@
 Give credit to:
-Bevouliin.com - background
-Kenny.nl - Hud assets
-Incompetech - Music (follow FAQ)
-Sonniss.com (Maybe) - Music
-Food Art - Andrey Pryvalov
-Hand art - Fotolia.com
+-Bevouliin.com - background https://bevouliin.com/license/
+
+-Incompetech - Music:
+
+"BossaBossa" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+
+"Street Party" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+
+"Deuces" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+
+"Bossa Antigua" Kevin MacLeod (incompetech.com)
+Licensed under Creative Commons: By Attribution 3.0 License
+http://creativecommons.org/licenses/by/3.0/
+
+-Food Art - Andrey Pryvalov
+
+-Hand art - Fotolia.com
