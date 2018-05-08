@@ -44,7 +44,9 @@ public class ManagerLevel2 : MonoBehaviour {
     public int lives = 3;
     private bool hasRun = false;
     private bool livesRun = false;
-
+    public AudioSource playSound;
+    public AudioClip gameOverSound;
+    public AudioClip gameWinSound;
 
 
 
@@ -296,12 +298,21 @@ public class ManagerLevel2 : MonoBehaviour {
 
     private void gameWin()
     {
+
+        playSound.clip = gameWinSound;
+        playSound.Play();
+
         Instantiate(winBox);
 
     }
 
     private void gameOver()
     {
+
+        playSound.clip = gameOverSound;
+        playSound.Play();
+
+
         hasRun = true;
         //stop control of hand
         Hand.GetComponent<HandMovement>().setCanMove(false);
