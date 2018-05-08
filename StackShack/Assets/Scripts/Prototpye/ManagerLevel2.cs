@@ -315,9 +315,7 @@ public class ManagerLevel2 : MonoBehaviour {
         {
             Hand.GetComponent<Rigidbody2D>().velocity = Hand.GetComponent<Rigidbody2D>().velocity.normalized * 0;
         }
-
-
-
+        
     }
 
 
