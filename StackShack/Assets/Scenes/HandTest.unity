@@ -170,6 +170,7 @@ MonoBehaviour:
   playSound: {fileID: 343306534}
   gameOverSound: {fileID: 8300000, guid: dec934b31f6f6e94b8715fa47160da07, type: 3}
   gameWinSound: {fileID: 8300000, guid: 451dccb0344fa17459bd604dc2bfbbd5, type: 3}
+  missedPiece: {fileID: 8300000, guid: b5e8ac13a21666b43a68ee2be6666258, type: 3}
 --- !u!4 &343306533
 Transform:
   m_ObjectHideFlags: 0

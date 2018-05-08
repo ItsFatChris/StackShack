@@ -33,6 +33,7 @@ public class Manager : MonoBehaviour {
     public AudioSource playSound;
     public AudioClip gameOverSound;
     public AudioClip gameWinSound;
+    public AudioClip missedPiece;
 
 
 
@@ -187,6 +188,9 @@ public class Manager : MonoBehaviour {
         //if there is one hit left and hasnt run yet
         if(killBox.GetComponent<KillBox>().getDeaths() == 1 && livesRun ==false)
         {
+
+            playSound.clip = missedPiece;
+            playSound.Play();
             //set the flag so it wont run again
             livesRun = true;
             //create the onehit object
@@ -198,6 +202,8 @@ public class Manager : MonoBehaviour {
         //if there are no lives left 
         if (killBox.GetComponent<KillBox>().getDeaths() == 2)
         {
+
+           
             //destroy oneHits
             Destroy(oneHits);
         }

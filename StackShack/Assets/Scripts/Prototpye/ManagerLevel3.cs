@@ -51,7 +51,10 @@ public class ManagerLevel3 : MonoBehaviour {
     public int lives = 3;
     private bool hasRun = false;
     private bool livesRun = false;
-
+    public AudioSource playSound;
+    public AudioClip gameOverSound;
+    public AudioClip gameWinSound;
+    public AudioClip missedPiece;
 
 
 
@@ -326,6 +329,9 @@ public class ManagerLevel3 : MonoBehaviour {
         //if there is one hit left and hasnt run yet
         if (killBox.GetComponent<KillBox>().getDeaths() == 1 && livesRun == false)
         {
+
+            playSound.clip = missedPiece;
+            playSound.Play();
             //set the flag so it wont run again
             livesRun = true;
             //create the onehit object
@@ -337,6 +343,8 @@ public class ManagerLevel3 : MonoBehaviour {
         //if there are no lives left 
         if (killBox.GetComponent<KillBox>().getDeaths() == 2)
         {
+
+          
             //destroy oneHits
             Destroy(oneHits);
         }
@@ -349,12 +357,21 @@ public class ManagerLevel3 : MonoBehaviour {
 
     private void gameWin()
     {
+
+        playSound.clip = gameWinSound;
+        playSound.Play();
         Instantiate(winBox);
 
     }
 
     private void gameOver()
     {
+
+
+        playSound.clip = gameOverSound;
+        playSound.Play();
+
+
         hasRun = true;
         //stop control of hand
         Hand.GetComponent<HandMovement>().setCanMove(false);

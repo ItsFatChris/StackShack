@@ -257,6 +257,9 @@ MonoBehaviour:
   twoHits: {fileID: 1251667910798666, guid: 3c79db2ce93039e43af06932ec0b8554, type: 2}
   oneHits: {fileID: 1650049514791860, guid: 883d2cd6d545a0b42b97e3805829b5d5, type: 2}
   lives: 1
+  playSound: {fileID: 1276607563}
+  gameOverSound: {fileID: 8300000, guid: dec934b31f6f6e94b8715fa47160da07, type: 3}
+  gameWinSound: {fileID: 8300000, guid: 451dccb0344fa17459bd604dc2bfbbd5, type: 3}
 --- !u!4 &1276607562
 Transform:
   m_ObjectHideFlags: 0
@@ -280,7 +283,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: d5e87fbf8c76c4c48864fa04228526e0, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
