@@ -2,7 +2,7 @@
 Stacking Game made in Unity
 
 This is a physics based stacking game made for my Game Programming Class.
-This version was made using Unity 2017.4.0f1 and the prject file may not open properly in newer versions of Unity. 
+It was made using Unity 2017.4.0f1 and the prject file may not open properly in newer versions of Unity. 
 
 If there are issues when importing the project and the issues all involve TextMesh Pro then you can fix the issue by doing the following:
 *There may be issues after doing this, and only has been tested to build and start the game*
